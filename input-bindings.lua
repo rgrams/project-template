@@ -16,7 +16,7 @@ local M = {
 
 	{ "axis", "a", "d", "p1_x"},
 	{ "axis", "w", "s", "p1_y"},
-	{ "axis", "left", "right", "p1_y" },
+	{ "axis", "left", "right", "p1_x" },
 	{ "axis", "up", "down", "p1_y" },
 }
 

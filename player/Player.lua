@@ -6,7 +6,7 @@ local function new(x, y)
 		{"circle", {40}},
 		{fixedRot = true}), {name = "player", children = {
 		Sprite("common/tex/dot-hard_64.png")
-	}, script = {Player_script}})
+	}, scripts = {Player_script}})
 end
 
 return new
