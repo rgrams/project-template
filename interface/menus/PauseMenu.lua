@@ -43,7 +43,7 @@ function PauseMenu.set(self)
       Button(self.ruu, "Quit to Menu", quitMenu),
       Button(self.ruu, "Quit Game", quit)
    }
-	self.widgetIndices = {2, 3, 4, 5, 5}
+	self.widgetIndices = {2, 3, 4, 5, 6}
 end
 
 return PauseMenu
