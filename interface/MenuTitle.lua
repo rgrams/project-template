@@ -1,5 +1,5 @@
 
-local theme = require "theme.theme"
+local theme = require "interface.theme.theme"
 
 local wrapWidth = 600
 

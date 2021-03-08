@@ -7,7 +7,7 @@
 	url = https://github.com/rgrams/love-ruu.git
 	branch = master
 [submodule "theme"]
-	path = theme
+	path = interface/theme
 	url = https://github.com/rgrams/ruu-theme.git
 	branch = master
 [submodule "interface/widgets"]
