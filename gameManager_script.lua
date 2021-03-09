@@ -7,7 +7,7 @@ function script.init(self)
 	Input.enable(self)
 end
 
-function script.input(self, name, value, change, isRepeat, x, y, dx, dy, isTouch, presses)
+function script.input(self, name, value, change, rawChange, isRepeat, x, y, dx, dy, isTouch, presses)
 	if name == "pause" and change == 1 then
 		if self.gameWorld then
 			if self.gameWorld.timeScale == 0 then -- game is paused, resume it.

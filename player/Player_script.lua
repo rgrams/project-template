@@ -17,7 +17,7 @@ function script.update(self, dt)
 	bodyController.update(self.body, dt, vx, vy, maxSpeed, maxAccel, self.mass)
 end
 
-function script.input(self, name, value, change, isRepeat, x, y, dx, dy, isTouch, presses)
+function script.input(self, name, value, change, rawChange, isRepeat, x, y, dx, dy, isTouch, presses)
 	if name == "p1_x" then
 		self.inputVec.x = value
 	elseif name == "p1_y" then
