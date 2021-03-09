@@ -7,9 +7,6 @@ local config = require "config"
 local worldDebugEnabled = true
 local guiDebugEnabled = false
 
-local GuiRoot = require "GuiRoot"
-local gameManager_script = require "gameManager_script"
-local menuSwitcher_script = require "interface.menuSwitcher_script"
 local scene, guiRoot, gameRoot
 
 local sw, sh = love.window.getMode()
@@ -22,6 +19,11 @@ function love.load()
 	Input.bindMultiple(require("input-bindings"))
 
 	physics.setCategoryNames(unpack(config.physicsCategoryNames))
+
+	-- Root objects & scripts may require physics categories, and are only used in load().
+	local GuiRoot = require "GuiRoot"
+	local gameManager_script = require "gameManager_script"
+	local menuSwitcher_script = require "interface.menuSwitcher_script"
 
 	scene = SceneTree(config.drawLayers, config.defaultDrawLayer)
 
