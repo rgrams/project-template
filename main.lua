@@ -2,7 +2,6 @@
 io.stdout:setvbuf("no") -- For use with external console.
 
 require "init-global-libs"
-local config = require "config"
 
 local worldDebugEnabled = true
 local guiDebugEnabled = false
