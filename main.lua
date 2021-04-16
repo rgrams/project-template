@@ -33,6 +33,8 @@ function love.load()
 
 	gameRoot = mod(Object(), {scripts = {gameManager_script}, name = "GameManager"})
 	scene:add(gameRoot)
+
+	sound = scene:add(SoundManager(require("audio.sound-data")))
 end
 
 function love.update(dt)
