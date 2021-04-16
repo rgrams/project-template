@@ -14,6 +14,11 @@ function Player.init(self)
 	self.mass = self.body:getMass()
 end
 
+function Player.final(self)
+	Player.super.final(self)
+	Input.disable(self)
+end
+
 function Player.update(self, dt)
 	local vx, vy = vec2.clamp(self.inputVec.x, self.inputVec.y, 0, 1)
 	bodyController.update(self.body, dt, vx, vy, maxSpeed, maxAccel, self.mass)
