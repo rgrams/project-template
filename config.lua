@@ -11,6 +11,7 @@ M.defaultDrawLayer = "default"
 
 M.physicsCategoryNames = {
 }
+M.entityGroups = { "players" }
 
 M.menuList = {
 	main = require "interface.menus.MainMenu",

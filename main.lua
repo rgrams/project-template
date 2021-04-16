@@ -19,6 +19,8 @@ function love.load()
 
 	physics.setCategoryNames(unpack(config.physicsCategoryNames))
 
+	entman.setGroups(unpack(config.entityGroups))
+
 	-- Root objects & scripts may require physics categories, and are only used in load().
 	local GuiRoot = require "GuiRoot"
 	local gameManager_script = require "gameManager_script"

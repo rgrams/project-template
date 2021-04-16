@@ -12,11 +12,13 @@ function Player.init(self)
 	Input.enable(self)
 	self.inputVec = vec2(Input.get("p1_x"), Input.get("p1_y"))
 	self.mass = self.body:getMass()
+	entman.spawn(self, "players")
 end
 
 function Player.final(self)
 	Player.super.final(self)
 	Input.disable(self)
+	entman.destroy(self, "players")
 end
 
 function Player.update(self, dt)
