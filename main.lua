@@ -3,7 +3,7 @@ require "philtre.init"
 _G.gui = require "philtre.objects.gui.all"
 local sceneLoader = require "lib.scene-loader"
 
-local startingScene = { objects = {} } -- Replace with: new.scene(sceneFilename)
+local startingScene = new.scene("root")
 local debugDrawEnabled = true
 local layers = {
 	world = { "debug", "default" },
