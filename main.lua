@@ -3,8 +3,8 @@ require "philtre.init"
 _G.gui = require "philtre.objects.gui.all"
 local sceneLoader = require "lib.scene-loader"
 
-local worldDebugDrawEnabled = true
 local startingScene = { objects = {} } -- Replace with: new.scene(sceneFilename)
+local debugDrawEnabled = true
 local layers = {
 	world = { "debug", "default" },
 }
@@ -25,14 +25,12 @@ end
 function love.draw()
 	scene:updateTransforms()
 	Camera.current:applyTransform()
-	if worldDebugDrawEnabled then
-		love.graphics.setLineWidth(1/Camera.current.zoom)
+	if debugDrawEnabled then
 		scene:callRecursive("debugDraw", "debug")
-		love.graphics.setLineWidth(1)
 	end
 	scene:draw("world")
-	if worldDebugDrawEnabled then
-		scene.draw_order:clear("debug")
+	if debugDrawEnabled then
+		scene.drawOrder:clear("debug")
 	end
 	Camera.current:resetTransform()
 end
