@@ -1,9 +1,10 @@
 
 require "philtre.init"
+_G.gui = require "philtre.objects.gui.all"
 local sceneLoader = require "lib.scene-loader"
 
-local startingScene = "start-scene"
 local worldDebugDrawEnabled = true
+local startingScene = { objects = {} } -- Replace with: new.scene(sceneFilename)
 local layers = {
 	world = { "debug", "default" },
 }
@@ -14,7 +15,7 @@ local scene
 function love.load(arg)
 	Input.init()
 	scene = SceneTree(layers, defaultLayer)
-	sceneLoader.addScene(scene, startingScene)
+	sceneLoader.addScene(startingScene, scene)
 end
 
 function love.update(dt)

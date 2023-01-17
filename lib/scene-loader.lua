@@ -18,7 +18,7 @@ local M = {}
 
 local basepath = (...):gsub("[^%.]+$", "")
 local classes = require(basepath .. "classes")
-local new = require "core.philtre.core.new"
+local new = require "philtre.core.new"
 local debugEnabled = false
 
 local function addTransforms(t1, t2, out)
