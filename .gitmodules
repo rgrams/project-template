@@ -1,16 +1,3 @@
 [submodule "philtre"]
 	path = philtre
 	url = git@github.com:JoshuaGrams/philtre2d.git
-	branch = master
-[submodule "ruu"]
-	path = ruu
-	url = git@github.com:rgrams/love-ruu.git
-	branch = master
-[submodule "theme"]
-	path = interface/theme
-	url = git@github.com:rgrams/ruu-theme.git
-	branch = master
-[submodule "interface/widgets"]
-	path = interface/widgets
-	url = git@github.com:rgrams/ruu-widgets.git
-	branch = master
