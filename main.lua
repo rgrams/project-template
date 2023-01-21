@@ -18,6 +18,7 @@ local screenRect = gui.Alloc(0, 0, love.graphics.getDimensions())
 
 function love.load(arg)
 	Input.init()
+	Input.bind( require("input-bindings") )
 	scene = SceneTree(layers, defaultLayer)
 	local root = sceneLoader.addScene(startingScene, scene)
 	Game, UI = root[1], root[2]
