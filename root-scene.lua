@@ -1,16 +1,23 @@
 return {
+	properties = { { type = "bool", name = "useProjectLocalPaths", value = true } },
 	isSceneFile = true,
-	properties = { { name = "useProjectLocalPaths", type = "bool", value = true } },
 	{
-		properties = { { name = "id", type = "string", value = "x1zC5j" } },
+		properties = {
+			{ type = "string", name = "id", value = "lH814x" },
+			{ type = "string", name = "name", value = "Game" }
+		},
 		class = "Object"
 	},
 	{
 		properties = {
-			{ name = "id", type = "string", value = "slJ77Q" },
-			{ name = "viewArea", type = "vec2", value = { y = 600, x = 800 } },
-			{ name = "isActive", type = "bool", value = true }
+			{ type = "string", name = "id", value = "qzLTSW" },
+			{ type = "string", name = "name", value = "UI" },
+			{ type = "vec2", name = "size", value = { y = 900, x = 1600 } },
+			{ type = "cardinalDir", name = "pivot", value = "NW" },
+			{ type = "GUIResizeMode", name = "modeX", value = "fill" },
+			{ type = "GUIResizeMode", name = "modeY", value = "fill" },
+			{ isExtra = true, type = "string", name = "layer", value = "gui" }
 		},
-		class = "Camera"
+		class = "GUI Node"
 	}
 }
